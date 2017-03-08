@@ -1,4 +1,4 @@
-'use strict'
+"use strict";
 
 var answer1 = prompt('Do you like music?');
 if (answer1.toLowerCase() === 'yes' || answer1.toLowerCase() === 'y') {
