@@ -1,4 +1,4 @@
-#Learning Journal Repository
+#Amout Me
 **Author** Fortunato Maycotte
 **Date** March 8, 2017
 
