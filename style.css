@@ -1,3 +1,10 @@
 body {
     background-color: red;
 }
+
+header {
+    border: 50px solid green;
+}
+section {
+  background-color: blue;
+}

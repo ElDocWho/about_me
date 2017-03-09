@@ -39,7 +39,7 @@ console.log(answer3);
 
 var answer4 = prompt('Do you like working?');
 if (answer4.toLowerCase() === 'yes' || answer4.toLowerCase() === 'y') {
-  alert('Good, work is alwyas good for the spirit');
+  alert('Good, work is always good for the spirit');
 } else if (answer4.toLowerCase() === 'no' || answer4.toLowerCase() === 'n') {
   alert('You should try enjoing it.');
 } else {
