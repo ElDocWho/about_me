@@ -47,23 +47,23 @@ if (answer4.toLowerCase() === 'yes' || answer4.toLowerCase() === 'y') {
 }
 
 console.log('Do you like working?');
-console.log(answer1);
+console.log(answer4);
 
-var answer4 = prompt('So did you like my questions?');
-if (answer4.toLowerCase() === 'yes' || answer4.toLowerCase() === 'y') {
-  alert('Good, very good');
-} else if (answer4.toLowerCase() === 'no' || answer4.toLowerCase() === 'n') {
-  alert('Too bad.');
+var answer5 = prompt('So did you like my questions?');
+if (answer5.toLowerCase() === 'yes' || answer5.toLowerCase() === 'y') {
+  alert('I like them too, very informative');
+} else if (answer5.toLowerCase() === 'no' || answer5.toLowerCase() === 'n') {
+  alert('Well too bad, not gonna change them.');
 } else {
   alert('That has nothing to do with what I asked you daaaa!!!!');
 }
 
 console.log('So did you like my questions?');
-console.log(answer2);
+console.log(answer5);
 
-alert('Couple questions more');
+alert('Couple more questions.......')
 
-var question6 = ('Guess a number from 0 to 9, you have 5 opportunities');
+var question6 = ('Guess a number from 0 to 9, you have 5 chances to guess it');
 var number6 = Math.floor(Math.random() * 10);
 var i;
 for (i=0; i<5; i++) {
@@ -82,4 +82,44 @@ alert('Good job!!!');
 }
 else {
 alert('You lost!!! the number was ' + number6);
+}
+
+var question7 = ('What is the name of my oldest son? 3 chances to guess');
+var number7 = ['Fortunato', 'Marcela'];
+var ii;
+
+for (ii = 0; ii < 3; ii++) {
+  var answer7 = prompt(question7);
+  if (answer7 === number7[0]) {
+alert('You win!!!');
+var wonwon = 1;
+break;
+}
+else {
+alert('Wrong!!!');
+}
+}
+
+alert('last question......');
+
+var question8 = ('What is the name of my daughter? 3 chances to guess');
+var iii;
+
+for (iii = 0; iii < 3; iii++) {
+  var answer8 = prompt(question8);
+  if (answer8 === number7[1]) {
+alert('You win!!!');
+var wonwonwon = 1;
+break;
+}
+else {
+alert('Wrong!!!');
+}
+}
+
+if ((wonwon ===1) && (wonwonwon === 1)) {
+  alert('You got both names right!!!!');
+}
+else {
+  alert('You did not get both names right!!!')
 }
