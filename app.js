@@ -47,16 +47,39 @@ if (answer4.toLowerCase() === 'yes' || answer4.toLowerCase() === 'y') {
 }
 
 console.log('Do you like working?');
-console.log(answer4);
+console.log(answer1);
 
-var answer5 = prompt('So did you like my questions?');
-if (answer5.toLowerCase() === 'yes' || answer5.toLowerCase() === 'y') {
-  alert('I like them too, very informative');
-} else if (answer5.toLowerCase() === 'no' || answer5.toLowerCase() === 'n') {
-  alert('Well too bad, not gonna change them.');
+var answer4 = prompt('So did you like my questions?');
+if (answer4.toLowerCase() === 'yes' || answer4.toLowerCase() === 'y') {
+  alert('Good, very good');
+} else if (answer4.toLowerCase() === 'no' || answer4.toLowerCase() === 'n') {
+  alert('Too bad.');
 } else {
   alert('That has nothing to do with what I asked you daaaa!!!!');
 }
 
 console.log('So did you like my questions?');
-console.log(answer5);
+console.log(answer2);
+
+alert('Couple questions more');
+
+var question6 = ('Guess a number from 0 to 9, you have 5 opportunities');
+var number6 = Math.floor(Math.random() * 10);
+var i;
+for (i=0; i<5; i++) {
+var answer6 = parseInt(prompt(question6));
+if (number6 === answer6) {
+alert('You won!!!!');
+var won = 1;
+break;
+}
+else {
+alert('Try again!!!');
+}
+}
+if (won === 1 ) {
+alert('Good job!!!');
+}
+else {
+alert('You lost!!! the number was ' + number6);
+}
