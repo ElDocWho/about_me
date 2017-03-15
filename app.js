@@ -1,47 +1,25 @@
 'use strict';
 
-var question = ('Do you like music?');
-var pos = ('I also like music');
-var neg = ('Mmmmmmm you are not the party type I see....');
-var nnn = ('That has nothing to do with what I asked you daaaa!!!!');
-
-function qam() {
-  var answer1 = prompt(question);
+function qam(a,b,c,d) {
+  var answer1 = prompt(a);
   if (answer1.toLowerCase() === 'yes' || answer1.toLowerCase() === 'y') {
-    alert(pos);
+    alert(b);
   } else if (answer1.toLowerCase() === 'no' || answer1.toLowerCase() === 'n') {
-    alert(neg);
+    alert(c);
   } else {
-    alert(nnn);
+    alert(d);
   }
-  console.log(question);
-  console.log(answer1);
+
 }
-qam();
+qam('Do you like music?','I also like music','Mmmmmmm you are not the party type I see....','That has nothing to do with what I asked you daaaa!!!!');
 
-var question = ('Do you like animals?');
-var pos = ('I am glad you like animals, I like them too!!!!');
-var neg = ('Wow!!!! do not talk to me anymore animal hater!!!');
-var nnn = ('That has nothing to do with what I asked you daaaa!!!!');
-qam();
+qam('Do you like animals?','I am glad you like animals, I like them too!!!!','Wow!!!! do not talk to me anymore animal hater!!!','That has nothing to do with what I asked you daaaa!!!!');
 
-var question = ('Do you like sports?');
-var pos = ('Awesssome sports are always entrataining!!!');
-var neg = ('Lazy!!!! Get up and do some sports');
-var nnn = ('That has nothing to do with what I asked you daaaa!!!!');
-qam();
+qam('Do you like sports?','Awesssome sports are always entrataining!!!','Lazy!!!! Get up and do some sports','That has nothing to do with what I asked you daaaa!!!!');
 
-var question = ('Do you like working?');
-var pos = ('Good, work is always good for the spirit');
-var neg = ('You should try enjoing it.');
-var nnn = ('That has nothing to do with what I asked you daaaa!!!!');
-qam();
+qam('Do you like working?','Good, work is always good for the spirit','You should try enjoing it.','That has nothing to do with what I asked you daaaa!!!!');
 
-var question = ('So did you like my questions?');
-var pos = ('I like them too, very informative');
-var neg = ('Well too bad, not gonna change them.');
-var nnn = ('That has nothing to do with what I asked you daaaa!!!!');
-qam();
+qam('So did you like my questions?','I like them too, very informative','Well too bad, not gonna change them.','That has nothing to do with what I asked you daaaa!!!!');
 
 alert('Couple more questions.......');
 
