@@ -21,73 +21,14 @@ qam('Do you like working?','Good, work is always good for the spirit','You shoul
 
 qam('So did you like my questions?','I like them too, very informative','Well too bad, not gonna change them.','That has nothing to do with what I asked you daaaa!!!!');
 
-alert('Couple more questions.......');
-
-var question6 = ('Guess a number from 0 to 9, you have 5 chances to guess it');
-var number6 = Math.floor(Math.random() * 10);
-var i;
-
-for (i = 0; i < 5; i++) {
-  var answer6 = parseInt(prompt(question6));
-  if (number6 === answer6) {
-    alert('You won!!!!');
-    var won = 1;
-    break;
-  }
-  else {
-    alert('Try again!!!');
-  }
-}
-if (won === 1 ) {
-  alert('Good job!!!');
-}
-else {
-  alert('You lost!!! the number was ' + number6);
-}
-
-var question7 = ('What is the name of my oldest son? 3 chances to guess');
-var number7 = ['Fortunato', 'Marcela'];
-var ii;
-
-for (ii = 0; ii < 3; ii++) {
-  var answer7 = prompt(question7);
-  if (answer7 === number7[0]) {
-    alert('You win!!!');
-    var wonwon = 1;
-    break;
-  }
-  else {
-    alert('Wrong!!!');
-  }
-}
-
-alert('last question......');
-
-var question8 = ('What is the name of my daughter? 3 chances to guess');
-var iii;
-
-for (iii = 0; iii < 3; iii++) {
-  var answer8 = prompt(question8);
-  if (answer8 === number7[1]) {
-    alert('You win!!!');
-    var wonwonwon = 1;
-    break;
-  }
-  else {
-    alert('Wrong!!!');
-  }
-}
-
-console.log('So did you like my questions?');
-console.log(answer5);
-
-alert('Couple more questions.......');
-
-var question6 = ('Guess a number from 0 to 9, you have 4 chances to guess it');
+alert('Now we are going to play a guessing game... ');
+var username = prompt('By the way what is your name?');
+var x = 6;
+var question6 = ('Guess a number from 0 to 9, Opportunities left: ');
 var number6 = Math.floor(Math.random() * 10);
 var i;
 for (i = 0; i < 4 ; i++) {
-  var answer6 = parseInt(prompt(question6));
+  var answer6 = parseInt(prompt(question6 + x));
   if (number6 === answer6) {
     alert('You won!!!!');
     var won = 1;
@@ -95,54 +36,53 @@ for (i = 0; i < 4 ; i++) {
   }
   else if (number6 < answer6){
     alert('Too high!!!');
+    var x = x - 1;
   }
   else if (number6 > answer6) {
     alert('Too low!!!');
+    var x = x - 1;
   }
 }
-if (won === 1) {
-  alert('You won!!!');
-}
-if (won !== 0) {
+if (won !== 1) {
   alert('You lost!!! the number was ' + number6);
 }
 
-var question7 = ('What is the name of my oldest son? 3 chances to guess');
-var number7 = ['Fortunato', 'Marcela'];
+var t = 6;
+var question7 = ('In what states have I lived? Opportunities left: ');
+var number7 = ['Texas', 'Oklahoma', 'California', 'Florida', 'Washington'];
 var ii;
+var C = 0;
 
-for (ii = 0; ii < 3; ii++) {
-  var answer7 = prompt(question7);
+for (ii = 0; ii < 6; ii++) {
+  var answer7 = prompt(question7 + t);
   if (answer7 === number7[0]) {
-    alert('You win!!!');
-    var wonwon = 1;
-    break;
+    var C = C + 1;
+    var t = t - 1;
+    alert('You got that one right!!! ' + C + ' correct so far ' + username);
   }
-  else {
-    alert('Wrong!!!');
+  if (answer7 === number7[1]) {
+    var C = C + 1;
+    var t = t - 1;
+    alert('You got that one right!!! ' + C + ' correct so far ' + username);
+  }
+  if (answer7 === number7[2]) {
+    var C = C + 1;
+    var t = t - 1;
+    alert('You got that one right!!! ' + C + ' correct so far ' + username);
+  }
+  if (answer7 === number7[3]) {
+    var C = C + 1;
+    var t = t - 1;
+    alert('You got that one right!!! ' + C + ' correct so far ' + username);
+  }
+  if (answer7 === number7[4]) {
+    var C = C + 1;
+    var t = t - 1;
+    alert('You got that one right!!! ' + C + ' correct so far ' + username);
+  }
+  if ((answer7 !== number7[0]) && (answer7 !== number7[1]) && (answer7 !== number7[2]) && (answer7 !== number7[3]) && (answer7 !== number7[4])) {
+    alert('Wrong!!!!');
+    var t = t - 1;
   }
 }
-
-alert('last question......');
-
-var question8 = ('What is the name of my daughter? 3 chances to guess');
-var iii;
-
-for (iii = 0; iii < 3; iii++) {
-  var answer8 = prompt(question8);
-  if (answer8 === number7[1]) {
-    alert('You win!!!');
-    var wonwonwon = 1;
-    break;
-  }
-  else {
-    alert('Wrong!!!');
-  }
-}
-
-if ((wonwon === 1) && (wonwonwon === 1)) {
-  alert('You got both names right!!!!');
-}
-else {
-  alert('You did not get both names right!!!');
-}
+alert(username + ', you had ' + C + ' correct answers!!! The correct answers were ' + number7);
