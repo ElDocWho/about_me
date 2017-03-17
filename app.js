@@ -23,24 +23,22 @@ qam('So did you like my questions?','I like them too, very informative','Well to
 
 alert('Now we are going to play a guessing game... ');
 var username = prompt('By the way what is your name?');
-var x = 6;
+var x = 4;
 var question6 = ('Guess a number from 0 to 9, Opportunities left: ');
 var number6 = Math.floor(Math.random() * 10);
 var i;
 for (i = 0; i < 4 ; i++) {
   var answer6 = parseInt(prompt(question6 + x));
+  var x = x - 1;
   if (number6 === answer6) {
     alert('You won!!!!');
-    var won = 1;
     break;
   }
   else if (number6 < answer6){
     alert('Too high!!!');
-    var x = x - 1;
   }
   else if (number6 > answer6) {
     alert('Too low!!!');
-    var x = x - 1;
   }
 }
 if (won !== 1) {
@@ -85,4 +83,4 @@ for (ii = 0; ii < 6; ii++) {
     var t = t - 1;
   }
 }
-alert(username + ', you had ' + C + ' correct answers!!! The correct answers were ' + number7);
+alert(username + ', you had ' + C + ' correct answers!!! The correct answers were: ' + number7);
