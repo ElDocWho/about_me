@@ -1,5 +1,8 @@
 'use strict';
 
+var counter = { lin : 0};
+var user = { name: null};
+var n = 0;
 function qam(a,b,c,d) {
   var answer1 = prompt(a);
   if (answer1.toLowerCase() === 'yes' || answer1.toLowerCase() === 'y') {
@@ -21,66 +24,84 @@ qam('Do you like working?','Good, work is always good for the spirit','You shoul
 
 qam('So did you like my questions?','I like them too, very informative','Well too bad, not gonna change them.','That has nothing to do with what I asked you daaaa!!!!');
 
-alert('Now we are going to play a guessing game... ');
-var username = prompt('By the way what is your name?');
-var x = 4;
-var question6 = ('Guess a number from 0 to 9, Opportunities left: ');
-var number6 = Math.floor(Math.random() * 10);
-var i;
-for (i = 0; i < 4 ; i++) {
-  var answer6 = parseInt(prompt(question6 + x));
-  var x = x - 1;
-  if (number6 === answer6) {
-    alert('You won!!!!');
-    break;
-  }
-  else if (number6 < answer6){
-    alert('Too high!!!');
-  }
-  else if (number6 > answer6) {
-    alert('Too low!!!');
-  }
+function q() {
+  var user1 = prompt('By the way what is your name?');
+  user.name = user1;
 }
-if (won !== 1) {
-  alert('You lost!!! the number was ' + number6);
-}
+q();
+function z() {
+  var n = counter.lin;
+  var n = n + 1;
+  counter.lin = n;
+};
 
+function quest6(c) {
+  var question6 = ('Guess a number from 0 to 9, Opportunities left: ');
+  var number6 = Math.floor(Math.random() * 10);
+  var i;
+  var won = 0;
+  var x = 4;
+  for (i = 0; i < 4 ; i++) {
+    var answer6 = parseInt(prompt(question6 + x));
+    var x = x - 1;
+    if (number6 === answer6) {
+      alert('You won!!!!');
+      var won = 1;
+      z();
+      console.log(counter.lin);
+      break;
+    }
+    else if (number6 < answer6){
+      alert('Too high!!!');
+    }
+    else if (number6 > answer6) {
+      alert('Too low!!!');
+    }
+  }
+  if (won !== 1) {
+    alert('You lost!!! the number was ' + number6);
+  }
+}
+quest6();
 var t = 6;
-var question7 = ('In what states have I lived? Opportunities left: ');
 var number7 = ['Texas', 'Oklahoma', 'California', 'Florida', 'Washington'];
-var ii;
-var C = 0;
-
-for (ii = 0; ii < 6; ii++) {
-  var answer7 = prompt(question7 + t);
-  if (answer7 === number7[0]) {
-    var C = C + 1;
-    var t = t - 1;
-    alert('You got that one right!!! ' + C + ' correct so far ' + username);
-  }
-  if (answer7 === number7[1]) {
-    var C = C + 1;
-    var t = t - 1;
-    alert('You got that one right!!! ' + C + ' correct so far ' + username);
-  }
-  if (answer7 === number7[2]) {
-    var C = C + 1;
-    var t = t - 1;
-    alert('You got that one right!!! ' + C + ' correct so far ' + username);
-  }
-  if (answer7 === number7[3]) {
-    var C = C + 1;
-    var t = t - 1;
-    alert('You got that one right!!! ' + C + ' correct so far ' + username);
-  }
-  if (answer7 === number7[4]) {
-    var C = C + 1;
-    var t = t - 1;
-    alert('You got that one right!!! ' + C + ' correct so far ' + username);
-  }
-  if ((answer7 !== number7[0]) && (answer7 !== number7[1]) && (answer7 !== number7[2]) && (answer7 !== number7[3]) && (answer7 !== number7[4])) {
-    alert('Wrong!!!!');
-    var t = t - 1;
+function quest7() {
+  var number7 = ['Texas', 'Oklahoma', 'California', 'Florida', 'Washington'];
+  var t = 6;
+  var question7 = ('What states have I lived at? Opportunities left ');
+  var ii = 0;
+  for (ii = 0; ii < 6; ii++) {
+    var answer7 = prompt(question7 + t);
+    if (answer7 === number7[0]) {
+      z();
+      var t = t - 1;
+      alert('You got that one right!!! ');
+    }
+    if (answer7 === number7[1]) {
+      z();
+      var t = t - 1;
+      alert('You got that one right!!! ');
+    }
+    if (answer7 === number7[2]) {
+      z();
+      var t = t - 1;
+      alert('You got that one right!!! ');
+    }
+    if (answer7 === number7[3]) {
+      z();
+      var t = t - 1;
+      alert('You got that one right!!! ');
+    }
+    if (answer7 === number7[4]) {
+      z();
+      var t = t - 1;
+      alert('You got that one right!!! ');
+    }
+    if ((answer7 !== number7[0]) && (answer7 !== number7[1]) && (answer7 !== number7[2]) && (answer7 !== number7[3]) && (answer7 !== number7[4])) {
+      alert('Wrong!!!!');
+      var t = t - 1;
+    }
   }
 }
-alert(username + ', you had ' + C + ' correct answers!!! The correct answers were: ' + number7);
+quest7();
+alert (user.name + ', you had ' + counter.lin + ' correct answers!!! The correct answers were: ' + number7);
